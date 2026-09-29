@@ -1,0 +1,423 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1447e6;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --color-sidebar-background: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-table-header: hsl(var(--table-header));
+  --color-table-row-hover: hsl(var(--table-row-hover));
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+}
+
+:root {
+  --background: 0 0% 98%;
+  --foreground: 222 47% 11%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 214 32% 91%;
+  --secondary-foreground: 222 47% 11%;
+
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 263 70% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 217 91% 60%;
+
+  /* Print Styles for overall layout (e.g. Header, Modals)
+  @media print {
+    @page {
+      size: A4;
+      margin: 10mm;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    .fixed {
+      display: none !important;
+    }
+
+    .print-page {
+      width: 210mm !important;
+      min-height: 297mm !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      display: block !important;
+      background: white !important;
+      margin: 0 auto !important;
+    }
+  } */
+
+  --radius: 0.5rem;
+
+  --table-header: 217 91% 60%;
+  --table-row-hover: 217 91% 97%;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 222 47% 11%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 217 33% 18%;
+  --secondary-foreground: 210 40% 98%;
+
+  --muted: 217 33% 18%;
+  --muted-foreground: 215 20% 65%;
+
+  --accent: 263 70% 50%;
+  --accent-foreground: 0 0% 100%;
+
+  --destructive: 0 63% 31%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 217 33% 18%;
+  --input: 217 33% 18%;
+  --ring: 217 91% 60%;
+
+  --table-header: 217 91% 60%;
+  --table-row-hover: 217 33% 25%;
+
+  --sidebar-background: 240 5.9% 10%;
+  --sidebar-foreground: 240 4.8% 95.9%;
+  --sidebar-primary: 224.3 76.3% 48%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 240 3.7% 15.9%;
+  --sidebar-accent-foreground: 240 4.8% 95.9%;
+  --sidebar-border: 240 3.7% 15.9%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+}
+
+.container {
+  @apply w-full max-w-[2400px] mx-auto py-3 px-3;
+}
+
+.bg-primary {
+  @apply bg-slate-50;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@utility btn {
+  @apply px-4 py-1 rounded-sm font-medium transition-all duration-200 text-xs;
+}
+
+@utility btn-blue {
+  @apply btn bg-blue-900 text-white hover:bg-blue-700;
+}
+
+@utility btn-cancel {
+  @apply btn bg-gray-200 hover:bg-gray-300;
+}
+
+@utility btn-green {
+  @apply btn bg-green-500 text-white hover:bg-green-400;
+}
+
+@utility btn-red {
+  @apply btn bg-red-500 text-white hover:bg-red-400;
+}
+
+@utility heading-primary {
+  @apply text-xl font-bold text-gray-800;
+}
+
+@utility description-primary {
+  @apply text-sm text-slate-600 leading-relaxed;
+}
+
+@utility heading-secondary {
+  @apply text-sm font-semibold text-gray-900;
+}
+
+@utility description-secondary {
+  @apply text-[10px] text-gray-600 leading-relaxed;
+}
+
+input {
+  autocomplete: var(--muted);
+}
+
+/* Base Layout Styles for LOgout Confirmation */
+.animate-fadeIn {
+  animation: fadeIn 0.2s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Hide Scrollbars (Chrome, Edge, Safari) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide Scrollbars (Firefox) */
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+/* Hide Scrollbars (Internet Explorer/Old Edge) */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+}
+
+/* AG Grid Customizations */
+.ag-row-pinned {
+  background-color: #e2e8f0 !important;
+  font-weight: bold;
+  color: #1e293b;
+}
+
+/* AG Grid filter popup background */
+.ag-popup {
+  background-color: white !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+/* Filter body */
+.ag-filter {
+  background-color: white !important;
+}
+
+/* Inputs inside filter */
+.ag-filter input,
+.ag-filter select {
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 6px 8px;
+}
+
+/* Filter buttons */
+.ag-standard-button {
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+}
+
+/* Hover */
+.ag-standard-button:hover {
+  background: #1d4ed8;
+}
+
+/* Remove magnifier icon inside filter popup */
+.ag-filter-body .ag-input-wrapper::before,
+.ag-filter-body .ag-icon-search {
+  display: none !important;
+}
+
+/* Remove left padding added for the icon */
+.ag-filter-body input {
+  padding-left: 8px !important;
+}
+
+/* Ant Design & HTML Disabled/ReadOnly Input Text Visibility Override */
+.ant-input[disabled],
+.ant-input-disabled,
+input[disabled],
+input:disabled,
+.ant-input[readonly],
+.ant-input-readonly,
+input[readonly],
+input:read-only {
+  color: #0f172a !important;
+  -webkit-text-fill-color: #0f172a !important;
+  font-weight: 700 !important;
+  opacity: 1 !important;
+}
+
+/* Ant Design Select Dropdown Option Text Styling */
+.ant-select-dropdown .ant-select-item-option-content {
+  font-size: 10px !important;
+  font-weight: 500 !important;
+}
+
+.ant-select-dropdown .ant-select-item {
+  min-height: 26px !important;
+  padding: 4px 8px !important;
+}
+
+/* Ant Design Form Item Label Spacing Reduction */
+.ant-form-item .ant-form-item-label {
+  padding-bottom: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.ant-form-item .ant-form-item-label > label {
+  height: auto !important;
+  min-height: unset !important;
+  line-height: 1.2 !important;
+}
+
+/* Ant Design Compact Table Styling Overrides */
+.ant-compact-table .ant-table-thead > tr > th {
+  padding: 4px 6px !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  background-color: #f1f5f9 !important;
+  color: #475569 !important;
+  line-height: 1.2 !important;
+}
+
+.ant-compact-table .ant-table-tbody > tr > td {
+  padding: 3px 4px !important;
+  font-size: 10px !important;
+}
+
+/* Perfect vertical alignment for Ant Design Checkbox items */
+.ant-checkbox-wrapper {
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.ant-checkbox-wrapper .ant-checkbox {
+  top: 0 !important;
+  align-self: center !important;
+}
+
+/* Ant Design Compact Dropdown Menu Overrides */
+.compact-dropdown-menu .ant-dropdown-menu,
+.compact-dropdown-menu.ant-dropdown-menu {
+  padding: 1px 0 !important;
+}
+
+.compact-dropdown-menu .ant-dropdown-menu-item,
+.compact-dropdown-menu .ant-dropdown-menu-title-content {
+  padding-top: 2px !important;
+  padding-bottom: 2px !important;
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+  min-height: 20px !important;
+  line-height: 1.2 !important;
+}
+
+.compact-dropdown-menu .ant-dropdown-menu-item-divider {
+  margin: 2px 0 !important;
+}

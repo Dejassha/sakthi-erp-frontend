@@ -1,0 +1,129 @@
+@media print {
+  /* Comprehensive UI hide */
+  nav,
+  aside,
+  header,
+  footer,
+  .print\:hidden,
+  button,
+  .btn-blue,
+  .btn-cancel,
+  .no-print,
+  #sidebar-root,
+  .sidebar,
+  .header-container,
+  h1,
+  .no-print {
+    display: none !important;
+    height: 0 !important;
+    width: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+  }
+
+  /* Reset browser's print defaults */
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Break out of all parent constraints */
+  #root,
+  main,
+  .dashboard-container,
+  .pdf-export-container,
+  #root > div {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important;
+    height: auto !important;
+    width: auto !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  /* Physical Page Break & Exact A4 Dimensions */
+  .print-page {
+    page-break-after: always !important;
+    break-after: page !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100vh !important;
+    /* Full page height */
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Different heights for single and multi-page */
+  .print-page.single-page-print {
+    height: 100vh !important;
+  }
+
+  .print-page.multi-page-print {
+    height: 100vh !important;
+  }
+
+  .print-page.last-page {
+    page-break-after: auto !important;
+    break-after: auto !important;
+  }
+
+  /* Professional A4 Wrapper */
+  .pdf-export-parent {
+    background: white !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* The actual red box container */
+  .quotation-box {
+    display: flex !important;
+    flex-direction: column !important;
+    border: 2px solid #dc2626 !important;
+    width: 90% !important;
+    height: 90vh !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Push content down */
+  .pdf-export-parent > div > div.py-10 {
+    flex-grow: 1 !important;
+  }
+
+  /* Formatting fixes */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    box-sizing: border-box !important;
+  }
+
+  table {
+    width: 100% !important;
+    table-layout: auto !important;
+    border-collapse: collapse;
+    overflow: visible !important;
+  }
+}
+
+.quotation-box table td,
+.quotation-box table th {
+  word-break: break-word;
+  border: 1px solid #dc2626 !important;
+}

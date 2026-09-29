@@ -1,0 +1,400 @@
+/* Header */
+.ag-header {
+  background-color: #f1f5f9;
+  --ag-header-column-padding: 1px;
+  --ag-icon-size: 9px;
+  min-height: 22px;
+}
+
+.ag-header-row {
+  min-height: 22px;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.ag-header-cell-label {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #1e293b;
+  font-size: 9px;
+  justify-content: center;
+  text-align: center;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  height: 100% !important;
+  line-height: 1.15 !important;
+  flex: 0 1 auto !important;
+  min-width: 0 !important;
+}
+
+.ag-header-cell-text {
+  display: inline-block !important;
+  align-items: center !important;
+  line-height: 1.15 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  text-align: inherit;
+}
+
+.ag-header-cell-wrap-text .ag-header-cell-label,
+.ag-header-cell-wrap-text .ag-header-cell-text,
+.ag-header-cell.wrap-header .ag-header-cell-label,
+.ag-header-cell.wrap-header .ag-header-cell-text,
+.ag-header-cell-wrap-text,
+.wrap-header {
+  white-space: normal !important;
+  text-overflow: clip !important;
+  word-break: break-word !important;
+  overflow-wrap: break-word !important;
+  line-height: 1.15 !important;
+  overflow: visible !important;
+}
+
+/* Header cell border & compact spacing */
+.ag-header-cell,
+.ag-header-group-cell {
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  padding-left: 1px !important;
+  padding-right: 1px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 100% !important;
+  overflow: hidden !important;
+}
+
+.ag-header-cell-comp-wrapper,
+.ag-cell-label-container {
+  padding: 0 !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 0 !important;
+  overflow: hidden !important;
+  flex-wrap: nowrap !important;
+}
+
+/* AG Grid native hidden rule override prevention */
+.ag-hidden {
+  display: none !important;
+}
+
+/* Hide multi-sort index number so it never overlaps column header labels */
+.ag-sort-indicator-order,
+.ag-sort-order {
+  display: none !important;
+}
+
+/* Make filter and sort icons smaller with clear spacing */
+.ag-header-icon:not(.ag-hidden),
+.ag-header-cell .ag-icon:not(.ag-hidden),
+.ag-sort-indicator-icon:not(.ag-hidden),
+.ag-filter-icon:not(.ag-hidden),
+.ag-header-label-icon:not(.ag-hidden),
+.ag-sort-indicator-container:not(.ag-hidden),
+.ag-header-cell-menu-button:not(.ag-hidden) {
+  font-size: 9px !important;
+  width: 9px !important;
+  height: 9px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ag-header-icon svg,
+.ag-header-cell .ag-icon svg,
+.ag-sort-indicator-icon svg,
+.ag-filter-icon svg {
+  width: 9px !important;
+  height: 9px !important;
+}
+
+.ag-center-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid #e2e8f0;
+  border-right: 1px solid #e2e8f0;
+  padding: 0 !important;
+  font-size: 9px;
+  color: #334155;
+  line-height: 1.25;
+}
+
+/* Zebra Rows */
+.ag-row-even {
+  background-color: #f8fafc;
+}
+
+.ag-row-odd {
+  background-color: #ffffff;
+}
+
+/* Hover */
+.ag-row-hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Selected Row */
+.ag-row-selected {
+  background-color: #e0e7ff !important;
+}
+
+/* Compact Pagination Panel */
+.ag-paging-panel {
+  height: 26px !important;
+  min-height: 26px !important;
+  max-height: 26px !important;
+  padding: 0 12px !important;
+  justify-content: space-between;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-size: 10px !important;
+  color: #475569;
+}
+
+.ag-paging-page-summary-panel,
+.ag-paging-row-summary-panel {
+  font-size: 10px !important;
+  color: #475569;
+}
+
+.ag-paging-button {
+  cursor: pointer;
+  opacity: 0.8;
+  padding: 0 2px !important;
+}
+
+.ag-paging-button:hover {
+  opacity: 1;
+}
+
+.ag-picker-field-wrapper {
+  height: 20px !important;
+  min-height: 20px !important;
+  font-size: 10px !important;
+  padding: 0 4px !important;
+}
+
+.ag-cell,
+.ag-cell-value {
+  border-right: 1px solid #e2e8f0;
+  color: #334155;
+  font-size: 9px;
+  display: flex;
+  align-items: center;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  --ag-cell-horizontal-padding: 0px !important;
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  line-height: 1.35;
+}
+
+.ag-cell.ag-cell-auto-height,
+.ag-cell.ag-cell-wrap-text,
+.ag-cell-auto-height .ag-cell-wrapper,
+.ag-cell-auto-height .ag-cell-value {
+  display: flex !important;
+  align-items: flex-center !important;
+  height: auto !important;
+  min-height: 100% !important;
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow-wrap: anywhere !important;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  line-height: 1 !important;
+}
+
+/* Pinned Right Column Divider */
+.ag-pinned-right-header,
+.ag-pinned-right-cols-container {
+  border-left: 1px solid #e2e8f0 !important;
+}
+
+/* Selection column header & cell perfect centering */
+.ag-pinned-left-header .ag-header-cell,
+.ag-pinned-left-cols-container .ag-cell,
+.ag-root-wrapper .ag-header-cell[col-id*="Selection"],
+.ag-root-wrapper .ag-header-cell[col-id*="selection"],
+.ag-root-wrapper .ag-header-cell[col-id*="ag-Grid-SelectionColumn"],
+.ag-header-cell[col-id*="Selection"],
+.ag-header-cell[col-id*="selection"],
+.ag-header-cell[col-id*="ag-Grid-SelectionColumn"],
+.ag-header-cell:has(.ag-header-select-all) {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  text-align: center !important;
+  justify-content: center !important;
+  align-items: center !important;
+  display: flex !important;
+}
+
+.ag-pinned-left-header .ag-header-cell .ag-header-cell-comp-wrapper,
+.ag-root-wrapper .ag-header-cell-comp-wrapper:has(.ag-header-select-all),
+.ag-header-cell:has(.ag-header-select-all) .ag-header-cell-comp-wrapper,
+.ag-header-cell[col-id*="Selection"] .ag-header-cell-comp-wrapper,
+.ag-header-cell[col-id*="selection"] .ag-header-cell-comp-wrapper,
+.ag-header-cell[col-id*="ag-Grid-SelectionColumn"] .ag-header-cell-comp-wrapper {
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+  text-align: center !important;
+  flex: 1 1 100% !important;
+}
+
+/* Hide resize handle, empty label container, and menu buttons on the selection header */
+.ag-pinned-left-header .ag-header-cell .ag-header-cell-resize,
+.ag-header-cell:has(.ag-header-select-all) .ag-header-cell-resize,
+.ag-header-cell[col-id*="Selection"] .ag-header-cell-resize,
+.ag-header-cell[col-id*="selection"] .ag-header-cell-resize,
+.ag-header-cell[col-id*="ag-Grid-SelectionColumn"] .ag-header-cell-resize,
+.ag-header-cell:has(.ag-header-select-all) .ag-cell-label-container,
+.ag-header-cell[col-id*="Selection"] .ag-cell-label-container,
+.ag-header-cell[col-id*="selection"] .ag-cell-label-container,
+.ag-header-cell[col-id*="ag-Grid-SelectionColumn"] .ag-cell-label-container,
+.ag-header-select-all + .ag-cell-label-container,
+.ag-header-select-all + * {
+  display: none !important;
+  width: 0 !important;
+  min-width: 0 !important;
+  max-width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  visibility: hidden !important;
+}
+
+.ag-root-wrapper .ag-header-select-all,
+.ag-root-wrapper .ag-header-select-all.ag-checkbox,
+.ag-root-wrapper .ag-header-cell .ag-header-select-all,
+.ag-root-wrapper .ag-header-cell-comp-wrapper .ag-header-select-all,
+.ag-root-wrapper .ag-selection-checkbox,
+.ag-root-wrapper .ag-selection-checkbox.ag-checkbox,
+.ag-theme-alpine .ag-header-select-all,
+.ag-theme-quartz .ag-header-select-all,
+.ag-selection-checkbox,
+.ag-header-select-all,
+.ag-header-select-all .ag-checkbox,
+.ag-cell-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0 auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  float: none !important;
+  position: static !important;
+}
+
+.ag-root-wrapper .ag-header-select-all.ag-labeled,
+.ag-root-wrapper .ag-selection-checkbox.ag-labeled,
+.ag-header-select-all.ag-labeled,
+.ag-selection-checkbox.ag-labeled {
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+
+.ag-header-select-all .ag-checkbox-input-wrapper,
+.ag-selection-checkbox .ag-checkbox-input-wrapper {
+  margin: 0 auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.ag-checkbox-input-wrapper {
+  display: inline-flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 13px !important;
+  height: 13px !important;
+  min-width: 13px !important;
+  min-height: 13px !important;
+  max-width: 13px !important;
+  max-height: 13px !important;
+  border-radius: 3px !important;
+  border: 1.2px solid #cbd5e1 !important;
+  background-color: #ffffff !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  transition: all 0.12s ease-in-out !important;
+  margin: auto !important;
+}
+
+.ag-checkbox-input-wrapper:hover {
+  border-color: #2563eb !important;
+}
+
+.ag-checkbox-input-wrapper.ag-checked,
+.ag-checkbox-input-wrapper.ag-indeterminate {
+  background-color: #2563eb !important;
+  border-color: #2563eb !important;
+}
+
+.ag-checkbox-input-wrapper.ag-checked .ag-icon,
+.ag-checkbox-input-wrapper.ag-indeterminate .ag-icon,
+.ag-checkbox-input-wrapper.ag-checked svg,
+.ag-checkbox-input-wrapper.ag-indeterminate svg {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  width: 9px !important;
+  height: 9px !important;
+  font-size: 9px !important;
+}
+
+.ag-checkbox-input-wrapper input {
+  opacity: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+}
+
+.ag-layout-auto-height,
+.ag-layout-auto-height * {
+  min-height: 2px !important;
+}
+
+/* Pinned Bottom / Totals Row */
+.ag-floating-bottom,
+.ag-floating-bottom .ag-row,
+.ag-row-pinned {
+  background-color: #f8fafc !important;
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  border-top: 2px solid #cbd5e1 !important;
+}
+
+.ag-floating-bottom .ag-cell,
+.ag-row-pinned .ag-cell {
+  font-weight: 700 !important;
+  color: #0f172a !important;
+  font-size: 10.5px !important;
+}
