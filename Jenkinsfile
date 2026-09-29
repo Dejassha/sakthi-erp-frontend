@@ -14,6 +14,11 @@ pipeline {
         // the build. Production mode is set only for the Build step.
         // Local deploy target (served / proxied to this path     
 
+
+
+
+
+
 	DEPLOY_PATH = "/home/dejassha/Projects/jenkins-office/sakthi-erp/"
 
         // Frontend .env Jenkins credential (backend uses "ecommerce-backend")
