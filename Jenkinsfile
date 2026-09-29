@@ -23,7 +23,16 @@ pipeline {
 
 
 
-        DEPLOY_PATH = "/home/dejassha/Projects/jenkins-office/sakthi-erp"
+        
+
+
+
+	// Writable inside the Jenkins container (jenkins user owns
+        // /var/jenkins_home). Do NOT use a host path like
+        // /home/dejassha/... here unless it is bind-mounted into the
+        // container, otherwise mkdir fails with "Permission denied".
+        // Host sync: /var/lib/docker/volumes/jenkins_home/_data/deploys/sakthi-erp
+        DEPLOY_PATH = "/var/jenkins_home/deploys/sakthi-erp"
 
         // Frontend .env Jenkins credential (backend uses "ecommerce-backend")
         ENV_CREDENTIAL_ID = "sakthi-erp-frontend"
