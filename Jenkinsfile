@@ -18,6 +18,11 @@ pipeline {
 
 
 
+
+
+
+
+
         DEPLOY_PATH = "/home/dejassha/Projects/jenkins-office/sakthi-erp"
 
         // Frontend .env Jenkins credential (backend uses "ecommerce-backend")
