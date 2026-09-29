@@ -12,20 +12,7 @@ pipeline {
         // NOTE: do NOT set NODE_ENV=production globally — npm ci skips
         // devDependencies (including vite) when it is set, which breaks
         // the build. Production mode is set only for the Build step.
-        // Local deploy target (served / proxied to this path)
-
-
-
-
-
-
-
-
-
-
-        
-
-
+        // Local deploy target (served / proxied to this path     
 
 	DEPLOY_PATH = "/home/dejassha/Projects/jenkins-office/sakthi-erp/"
 
