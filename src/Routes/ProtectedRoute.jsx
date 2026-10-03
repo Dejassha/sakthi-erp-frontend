@@ -37,8 +37,9 @@ const ProtectedRoute = ({ children, roles }) => {
     return <>{children}</>;
   }
 
-  // Check role-based access
-  if (roles && !roles.some((role) => user.roles.includes(role))) {
+  // Check role-based access (user.roles may be missing for legacy accounts)
+  const userRoles = user.roles || [];
+  if (roles && !roles.some((role) => userRoles.includes(role))) {
     return <Navigate to={ROUTES.PUBLIC.UNAUTHORIZED} replace />;
   }
   // Access granted
